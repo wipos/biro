@@ -3,7 +3,7 @@ FROM scratch AS ctx
 COPY build_files /
 
 # Base Image
-FROM ghcr.io/ublue-os/bluefin-nvidia-open-dx:stable
+FROM ghcr.io/ublue-os/bluefin-dx-nvidia-open:stable
 
 # RUN rm /opt && mkdir /opt
 
