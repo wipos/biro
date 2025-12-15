@@ -19,17 +19,7 @@ set -ouex pipefail
 # Disable COPRs so they don't end up enabled on the final image:
 # dnf5 -y copr disable ublue-os/staging
 
-### Install Nessus
-# Download Nessus RPM
-curl --request GET \
-  --url 'https://www.tenable.com/downloads/api/v2/pages/nessus/files/Nessus-10.11.0-el9.x86_64.rpm' \
-  --output '/tmp/Nessus-10.11.0-el9.x86_64.rpm'
-
-# Install Nessus
-dnf install -y /tmp/Nessus-10.11.0-el9.x86_64.rpm
-
-# Clean up RPM file
-rm -f /tmp/Nessus-10.11.0-el9.x86_64.rpm
+dnf5 -y install hashcat
 
 #### Example for enabling a System Unit File
 
